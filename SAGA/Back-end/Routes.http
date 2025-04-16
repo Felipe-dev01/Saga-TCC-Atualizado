@@ -1,0 +1,113 @@
+#cadastrar usuário
+POST http://localhost:8081/cad
+Content-Type: application/json
+
+{
+  "nome": "Felipe Farias", 
+  "email": "felipe@sec.com", 
+  "senha": "12345678", 
+  "dt_nasc": "2006-05-01T00:00:00.000Z", 
+  "telefone": "19998952059", 
+  "cpf": "12345678906", 
+  "ft_perfil": "sem foto",
+  "tipo": 1
+}
+
+###
+POST http://localhost:8081/cad
+Content-Type: application/json
+
+{
+  "nome": "Hugo Rocha", 
+  "email": "hugo@sec.com", 
+  "senha": "12345678", 
+  "dt_nasc": "2006-05-01T00:00:00.000Z", 
+  "telefone": "19998972055", 
+  "cpf": "12345678902", 
+  "ft_perfil": "sem foto",
+  "tipo": 1
+}
+
+###
+POST http://localhost:8081/cad
+Content-Type: application/json
+
+{
+  "nome": "Felipe Farias", 
+  "email": "felipe@prof.com", 
+  "senha": "12345678", 
+  "dt_nasc": "2006-05-01T00:00:00.000Z", 
+  "telefone": "19998852055", 
+  "cpf": "12345688902", 
+  "ft_perfil": "sem foto",
+  "tipo": 2
+}
+
+###
+POST http://localhost:8081/cad
+Content-Type: application/json
+
+{
+  "nome": "Hugo Rocha", 
+  "email": "hugo@prof.com", 
+  "senha": "12345678", 
+  "dt_nasc": "2006-05-01T00:00:00.000Z", 
+  "telefone": "19998952055", 
+  "cpf": "12345668902", 
+  "ft_perfil": "sem foto",
+  "tipo": 2
+}
+
+###
+#logar em uma conta
+POST http://localhost:8081/login
+Content-Type: application/json
+
+{
+    "email": "hugo@sec.com",
+    "senha": "12345678"
+}
+
+###
+#buscar informações
+GET  http://localhost:8081/info/eec1b623-f600-4643-96a0-9784383f0f79
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDQ3NjIzNDYsImV4cCI6MTc0NDc2NTk0Nn0.f2zrwbh1r4xWInfMjNbcUw-UgZfyB7hKjXN8VmpQpqU
+Content-Type: application/json
+
+
+###
+#cadastrar curso
+POST http://localhost:8081/sec/curso
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhNDgxNzMwNy1iNDU3LTQ5NTctYjhlZS1jYmFmMzViMDU2YjkiLCJpYXQiOjE3NDQ0MTg5NzAsImV4cCI6MTc0NDQyMjU3MH0.fJvjjO8Y0VS7AxzsboXycF8cUmhX1ZUKFv_l6PD6sK8
+
+{
+  "nome": "Informática Para Internet", 
+  "periodo": "Noturno",
+  "descricao": "Curso de Informática Para Internet",
+  "ch_total": "120",
+  "freq_min": "75"
+}   
+
+###
+#cadastrar materia
+POST http://localhost:8081/sec/materia/d9c956fc-78ef-48ef-995b-b3c869339fdc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhNDgxNzMwNy1iNDU3LTQ5NTctYjhlZS1jYmFmMzViMDU2YjkiLCJpYXQiOjE3NDQ0MTg5NzAsImV4cCI6MTc0NDQyMjU3MH0.fJvjjO8Y0VS7AxzsboXycF8cUmhX1ZUKFv_l6PD6sK8
+
+{
+  "nome": "Programação Web",  
+  "descricao": "Curso de Programação Web",
+  "ch_total": "120",
+  "freq_min": "75"
+} 
+
+
+
+
+
+
+
+
+
+
