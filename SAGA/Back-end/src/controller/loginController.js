@@ -18,7 +18,7 @@ export class LoginController {
         }
 
         const id_user = userExists.id;
-        const token = jwt.sign({ userId: id_user }, JWT_SECRET, { expiresIn: '10m' });
+        const token = jwt.sign({ userId: id_user }, JWT_SECRET, { expiresIn: '1h' });
         const tipo = userExists.tipo;
         
         console.log("Logado com sucesso!");

@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
       try {
         const token = localStorage.getItem('token');
-        if (!token) {
-          alert("Token não encontrado. Faça login novamente.");
-          window.location.href = "../../Front-End/Login/Login.html";
-          return;
-        }
+    if (!token) {
+        alert("Token não encontrado. Faça login novamente.");
+        window.location.href = "../../Front-End/Login/Login.html";
+        return;
+    }
   
         // Requisição de cadastro
         const response = await fetch('http://localhost:8081/cad', {

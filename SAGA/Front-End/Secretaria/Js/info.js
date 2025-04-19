@@ -12,13 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const id_user = localStorage.getItem('id_user'); 
   const apiUrl = `http://localhost:8081/info/${id_user}`;
 
-  // Recupera o token do localStorage
-  const token = localStorage.getItem('token'); // Certifique-se de que o token foi salvo com essa chave
-
-  // Verifica se o token existe
+  const token = localStorage.getItem('token');
   if (!token) {
-    console.error('Token não encontrado no localStorage');
-    return;
+      alert("Token não encontrado. Faça login novamente.");
+      window.location.href = "../../Front-End/Login/Login.html";
+      return;
   }
 
   fetch(apiUrl, {

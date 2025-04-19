@@ -71,8 +71,17 @@ Content-Type: application/json
 ###
 #buscar informações
 GET  http://localhost:8081/info/eec1b623-f600-4643-96a0-9784383f0f79
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDQ3NjIzNDYsImV4cCI6MTc0NDc2NTk0Nn0.f2zrwbh1r4xWInfMjNbcUw-UgZfyB7hKjXN8VmpQpqU
-Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDQ4NTE5NTksImV4cCI6MTc0NDg1NTU1OX0.e5ZM7g5p_xStm8fC03eSkKDNkyAx7dN4cp7DrIWTOLI
+
+###
+#listar usuarios
+GET http://localhost:8081/listarUsuarios
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDQ4NTE5NTksImV4cCI6MTc0NDg1NTU1OX0.e5ZM7g5p_xStm8fC03eSkKDNkyAx7dN4cp7DrIWTOLI
+
+###
+#excluir usuario
+DELETE http://localhost:8081/sec/excluirUsuario/9a856466-41e9-4da1-b36c-ed0915f4a2df
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDQ4NTE5NTksImV4cCI6MTc0NDg1NTU1OX0.e5ZM7g5p_xStm8fC03eSkKDNkyAx7dN4cp7DrIWTOLI
 
 
 ###
@@ -101,12 +110,32 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhNDgxN
   "ch_total": "120",
   "freq_min": "75"
 } 
+###
+// Listar Usuários
+GET http://localhost:8081/listarUsuarios
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhNDgxNzMwNy1iNDU3LTQ5NTctYjhlZS1jYmFmMzViMDU2YjkiLCJpYXQiOjE3NDQ0MTg5NzAsImV4cCI6MTc0NDQyMjU3MH0.fJvjjO8Y0VS7AxzsboXycF8cUmhX1ZUKFv_l6PD6sK8
 
 
+###
+#editar usuario
+PUT http://localhost:8081/sec/editarUsuario/eec1b623-f600-4643-96a0-9784383f0f79
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDQ4NDkxNjQsImV4cCI6MTc0NDg0OTc2NH0.7_h5PeOTolO-n0MrLLx4PbjWlNL9hAfHcdpllWG3tnk
 
+{
+  "nome": "Felipe Farias", 
+  "email": "felipe@sec.com", 
+  "senha": "12345678", 
+  "dt_nasc": "2006-05-01T00:00:00.000Z", 
+  "telefone": "19998952059", 
+}
 
-
-
+###
+#Consultar Usuario
+GET http://localhost:8081/sec/consultarUsuario/3c6ebd29-e141-4dd1-81f1-4f78c2580c41
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDUwNjYzNDEsImV4cCI6MTc0NTA2OTk0MX0.f7MLTBnJkuw0DXlqtJIUpbsL25GfiDEMiy6WAbMB0P0
 
 
 

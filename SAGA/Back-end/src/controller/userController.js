@@ -29,4 +29,10 @@ export class UserController {
         return res.json({ message: "Cadastro concluido com sucesso" })
 
     }
+    async listarUsuarios(req, res) {
+        const usuarios = await prisma.user.findMany()
+        return res.json(usuarios)
+    }
+
+      
 }
