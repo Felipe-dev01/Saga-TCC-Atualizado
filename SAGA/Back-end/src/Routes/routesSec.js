@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { tokenAuthenticate } from "../src/middlewares/authenticate.js";
-import { SecController } from "../src/controller/secController.js";
+import { tokenAuthenticate } from "../middlewares/authenticate.js";
+import { SecController } from "../controller/secController.js";
 
 export const routerSec = new Router();
 

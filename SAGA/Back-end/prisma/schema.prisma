@@ -8,53 +8,91 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  matricula Int      @default(autoincrement())
-  nome      String
-  email     String   @unique
-  senha     String
-  dt_nasc   DateTime
-  telefone  String   @unique
-  cpf       String   @unique
-  ft_perfil String
-  tipo      Int
+  id_user     String      @id @default(uuid())
+  matricula   Int         @default(autoincrement())
+  nome        String
+  email       String      @unique
+  senha       String
+  dt_nasc     DateTime
+  telefone    String      @unique
+  cpf         String      @unique
+  ft_perfil   String
+  tipo        Int
+
+  professores Professor[]
+  alunos      Aluno[]
+  secretarias  Secretaria[]
 
   @@map("user")
 }
 
+model Professor {
+  id_professor String  @id @default(uuid())
+  id_user      String  @unique
+  user         User    @relation(fields: [id_user], references: [id_user])
+  id_turma     String
+  turma        Turma   @relation(fields: [id_turma], references: [id_turma])
+
+  @@map("professor")
+}
+
+model Aluno {
+  id_aluno String @id @default(uuid())
+  id_user String @unique
+  id_turma String
+  user    User   @relation(fields: [id_user], references: [id_user])
+  turma   Turma  @relation(fields: [id_turma], references: [id_turma])
+
+  @@map("aluno")
+}
+
+model Secretaria {
+  id_secretaria String @id @default(uuid())
+  id_user       String @unique
+  user          User   @relation(fields: [id_user], references: [id_user])
+
+  @@map("secretaria")
+}
+
 model Curso {
-  id_curso  String  @id @default(uuid())
+  id_curso  String    @id @default(uuid())
   nome      String
-  codigo    Int     @unique @default(autoincrement())
+  codigo    Int       @unique @default(autoincrement())
   periodo   String
   descricao String
   ch_total  String
   freq_min  String
+
   turmas    Turma[]
   materias  Materia[]
+
   @@map("curso")
 }
 
 model Materia {
   id_materia String @id @default(uuid())
   nome       String
-  codigo     Int     @unique @default(autoincrement())
+  codigo     Int    @unique @default(autoincrement())
   descricao  String
   ch_total   String
   freq_min   String
   id_curso   String
-  curso      Curso    @relation(fields: [id_curso], references: [id_curso])
+  curso      Curso  @relation(fields: [id_curso], references: [id_curso])
 
   @@map("materia")
 }
 
 model Turma {
-  id_turma  String   @id @default(uuid())
-  nome      String
-  dt_inicio DateTime
-  semestres String
-  id_curso  String
-  curso     Curso    @relation(fields: [id_curso], references: [id_curso])
+  id_turma     String    @id @default(uuid())
+  nome         String
+  dt_inicio    DateTime
+  semestres    String
+  id_curso     String
+  id_professor String
+  curso        Curso     @relation(fields: [id_curso], references: [id_curso])
+  
+  profesores   Professor[]
+  alunos       Aluno[]
 
   @@map("turma")
 }

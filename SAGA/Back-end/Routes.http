@@ -133,9 +133,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxY
 
 ###
 #Consultar Usuario
-GET http://localhost:8081/sec/consultarUsuario/3c6ebd29-e141-4dd1-81f1-4f78c2580c41
+GET http://localhost:8081/sec/consultarUsuario/ae8ef361-b0df-4e9e-b137-373d21c818b6
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDUwNjYzNDEsImV4cCI6MTc0NTA2OTk0MX0.f7MLTBnJkuw0DXlqtJIUpbsL25GfiDEMiy6WAbMB0P0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZWMxYjYyMy1mNjAwLTQ2NDMtOTZhMC05Nzg0MzgzZjBmNzkiLCJpYXQiOjE3NDUzNDY1NTcsImV4cCI6MTc0NTM1MDE1N30.hmolq0VLJmEESQvko80wUe3_hFM_peqq6iBl3zIKbCA
 
 
 

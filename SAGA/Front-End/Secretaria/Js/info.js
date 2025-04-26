@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('matricula').value = data.matricula || '';
         document.getElementById('email').value = data.email || '';
         document.getElementById('telefone').value = data.telefone || '';
+        document.getElementById('cpf').value = data.cpf || '';
       } else {
         console.error('Usuário não encontrado');
       }
